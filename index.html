@@ -29,11 +29,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
 <head> 
-	<title>COVID or FLU?</title>  
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="stylesheet" href="w3.css">
-	<link rel="stylesheet" href="w3-colors-flat.css">
+<title>COVID or FLU?</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3-colors-flat.css">
 </head> 
 
 <script>
@@ -99,13 +99,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>	Feeling Under the Weather? 
-		Uh oh! Is it COVID or just some good old seasonal Flu?</h1>
+	<h1>Feeling Under the Weather? Uh oh! Is it COVID or just some good old seasonal Flu?</h1>
 	<!-- / changed opening header -->
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Have you been feeling sick lately but can't tell if you caught COVID or an Influenza strain? Answer a few questions regarding your symptoms to help guide your next steps!</p>
+	<p>Have you been feeling sick lately but can't tell if you caught COVID or an Influenza strain? Answer a few questions regarding your symptoms to help guide you!</p>
 	<!-- /changed the opening paragraph -->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started! </a>
@@ -120,11 +119,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p> 
+        <p>Have you experienced symptoms for significantly longer than four days after infection?</p> 
 		<a href="#two"  onclick="COVIDadd();" class="w3-btn w3-black"> Yes</a>  
          	<a href="#two"  onclick="FLUadd();" class="w3-btn w3-black">No</a>
 		<!-- /Added yes or no buttons for 1st question -->
 		<!-- /changed onclick functions for covid and flu -->
+		<!-- /changed 1st question to be COVID v Flu symptoms -->
         </div>
 
 </div>
@@ -135,11 +135,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
+		<p>Have you experienced a significant loss of taste or smell?</p>
 		<a href="#three"  onclick="COVIDadd();" class="w3-btn w3-black"> Yes</a>  
          	<a href="#three"  onclick="FLUadd();" class="w3-btn w3-black">No</a>
 		<!-- /Added yes or no buttons for 2nd question -->
 		<!-- /changed onclick functions for covid and flu -->
+		<!-- /changed 2nd question to be COVID v flu symptoms -->
 	</div>
 
 </div>
@@ -150,11 +151,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
+		<p>Have you experienced skin rashes or irritation?</p>
 		<a href="#four"  onclick="COVIDadd();" class="w3-btn w3-black"> Yes</a>  
          	<a href="#four"  onclick="FLUadd();" class="w3-btn w3-black">No</a>
 		<!-- /Added yes or no buttons for 3rd question, -->
 		<!-- /changed onclick functions for covid and flu -->
+		<!-- /changed 3rd question to be COVID v Flu symptoms -->
 	</div>
 	
 </div>	
@@ -165,11 +167,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p>
+		<p>Have you experienced shortness of breath since your symptoms developed?</p>
 		<a href="#five"  onclick="COVIDadd();" class="w3-btn w3-black"> Yes</a>  
          	<a href="#five"  onclick="FLUadd();" class="w3-btn w3-black">No</a>
 		<!-- /Added yes or no buttons for 4th question, -->
 		<!-- /changed onclick functions for covid and flu -->
+		<!-- /changed 4th question to be COVID v Flu symptoms -->
 	</div>
 	
 </div>
@@ -192,11 +195,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	</div>
 	
-<!--added script and function at top , -->	
+<!--added script and function for COVID v Flu calculations at top in script , -->	
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>DIY! Thank you for trying my App!</p>
 </footer>
 	
 
