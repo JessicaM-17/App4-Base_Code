@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Jessica Moran
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is to use hallmark symptoms to help patients distinguish if any recent illnesses are the result of covid or just seasonal flu
  
 Known Issues:
-blah, blah, blah, blah
+
 Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 
 References:
@@ -37,9 +37,30 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
+var allergy_count = 0;
+        var cold_count = 0;
 
-	//YOUR JAVASCRIPT GOES HERE
 
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+		alert(allergy_count);
+
+        }
+
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        }
+	
+	 //code to calculate the percentages of cold and allergy based on response below
+	
+		
+	function math(){
+		var conclusionText = document.getElementById("final");
+		var allergyPercent = (allergy_count / 4) * 100;
+		var coldPercent = (cold_count / 4) * 100;
+		conclusionText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+		
+	}
 </script>	
 
 
@@ -67,9 +88,93 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Cold or Allergies?</h1>
+</div>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are your eyes watery or itchy?</p> 
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        </div><!-- /Added yes or no buttons for 1st question -->
+</div>
+	
+<div class="page" id="two">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a fever?</p>
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  
+         	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        </div><!-- /Added yes or no buttons for 2nd question -->
+</div>
+	
+<div class="page" id="three">	
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p>
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  
+         	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div><!-- /Added yes or no buttons for 3rd question, -->
+</div>	
+
+<div class="page" id="four">	
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?</p>
+		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div><!-- /Added yes or no buttons for 4th question, -->
+</div><!--i think i had too many divs so my pages won't load, hopefully this fixes it , -->	
+	
+<!--added new page for resultz , -->	
+	<div class="page" id="five">	 
+	
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>The Results are in!!</h1>  
+<!--added heading , -->	 
+	
+	</div>	
+	<div id="content" class="w3-container">
+		<p id="final"></p> 
+		<!--added id , -->
+		<button onclick="math()">Results</button>
+		<!--this button is pressed to generate results-->	
+	
+	</div>
+	
+	</div>
+	
+<!--added script and function at top , -->	
+</div>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+	
+
 	
 </body>
 </html>
