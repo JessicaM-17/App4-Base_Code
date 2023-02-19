@@ -37,29 +37,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
-var allergy_count = 0;
-        var cold_count = 0;
+	var COVID_count = 0;
+        var FLU_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+        function COVIDadd(){
+            COVID_count = COVID_count + 1;
+		alert(COVID_count);
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function FLUadd(){
+            FLU_count = FLU_count + 1;
         }
 	
-	 //code to calculate the percentages of cold and allergy based on response below
+	 //code to calculate the percentages of COVID prob vs FLU pro based on patatient response 
 	
 		
 	function math(){
 		var conclusionText = document.getElementById("final");
-		var allergyPercent = (allergy_count / 4) * 100;
-		var coldPercent = (cold_count / 4) * 100;
-		conclusionText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
-		
+		var COVIDPercent = (COVID_count / 4) * 100;
+		var FLUPercent = (FLU_count / 4) * 100;
+		conclusionText.innerHTML = "Probability it is COVID =" + COVIDPercent + "<br> Probability it is the FLU =" + FLUPercent;
+		//changed variables to match covid and flu counts based on response, used app 3 base to ensure function works
 	}
 </script>	
 
