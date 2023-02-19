@@ -19,7 +19,7 @@ triedel@utexas.edu
 Brief Description of Goal of Code:
 The goal of this code is to use hallmark symptoms to help patients distinguish if any recent illnesses are the result of covid or just seasonal flu
  
-Known Issues:
+Known Issues: none that I know of 
 
 Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 
@@ -29,31 +29,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
 <head> 
-<title>COVID or FLU?</title>  
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="w3-colors-flat.css">
+	<title>COVID or FLU?</title>  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" href="w3-colors-flat.css">
 </head> 
 
 <script>
 	var COVID_count = 0;
         var FLU_count = 0;
+	//added covid v flu counter
 
-
+	//The function below adds covid points as patients answer yes to covid symptoms
         function COVIDadd(){
             COVID_count = COVID_count + 1;
 		alert(COVID_count);
 
         }
-
+	//The function below adds flu points as pateints answer no to covid symptoms 
         function FLUadd(){
             FLU_count = FLU_count + 1;
         }
 	
 	 //code to calculate the percentages of COVID prob vs FLU pro based on patatient response 
 	
-		
 	function math(){
 		var conclusionText = document.getElementById("final");
 		var COVIDPercent = (COVID_count / 4) * 100;
@@ -68,7 +68,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
        alert("This file last modified  " + docMod);
        console.log("This file last modified  " + docMod);
 // added the code to help see updated version of code on pages for GitHub, thank you for this useful code!
-
 
 
 </script>	
@@ -101,23 +100,24 @@ img, object{
 	max-width:90%;
         	}
 
-
 </style>
+<!-- / added image size limits to style code above -->
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>COVID or FLU? How can I tell?</h1>
-	<!-- / changed opening header -->
+		<!-- / changed opening header -->
 </div>
 	
 <div id="content" class="w3-container">
 	<p> Feeling Under the Weather? Uh oh! Is it COVID or just some good old seasonal Flu?</p>
 	<p> Answer a few questions regarding your symptoms to help guide you!</p>
 	<img src="https://sa1s3optim.patientpop.com/assets/images/provider/photos/2272612.jpg" alt= "sa1s3optim.patientpop" width="400" height="200">
-	<!-- /changed the opening paragraph -->
-	<!-- /added images of covid and flu viruses -->
+		<!-- /changed the opening paragraph -->
+		<!-- /added images of covid and flu viruses -->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started! </a>
+		<!-- /this button starts the COVID v FLU questions -->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -132,9 +132,9 @@ img, object{
         <p>Have you experienced symptoms for significantly longer than four days after infection?</p> 
 		<a href="#two"  onclick="COVIDadd();" class="w3-btn w3-black"> Yes</a>  
          	<a href="#two"  onclick="FLUadd();" class="w3-btn w3-black">No</a>
-		<!-- /Added yes or no buttons for 1st question -->
-		<!-- /changed onclick functions for covid and flu -->
-		<!-- /changed 1st question to be COVID v Flu symptoms -->
+			<!-- /Added yes or no buttons for 1st question -->
+			<!-- /changed onclick functions for covid and flu -->
+			<!-- /changed 1st question to be COVID v Flu symptoms -->
         </div>
 
 </div>
@@ -148,9 +148,9 @@ img, object{
 		<p>Have you experienced a significant loss of taste or smell?</p>
 		<a href="#three"  onclick="COVIDadd();" class="w3-btn w3-black"> Yes</a>  
          	<a href="#three"  onclick="FLUadd();" class="w3-btn w3-black">No</a>
-		<!-- /Added yes or no buttons for 2nd question -->
-		<!-- /changed onclick functions for covid and flu -->
-		<!-- /changed 2nd question to be COVID v flu symptoms -->
+			<!-- /Added yes or no buttons for 2nd question -->
+			<!-- /changed onclick functions for covid and flu -->
+			<!-- /changed 2nd question to be COVID v flu symptoms -->
 	</div>
 
 </div>
@@ -164,9 +164,9 @@ img, object{
 		<p>Have you experienced skin rashes or irritation?</p>
 		<a href="#four"  onclick="COVIDadd();" class="w3-btn w3-black"> Yes</a>  
          	<a href="#four"  onclick="FLUadd();" class="w3-btn w3-black">No</a>
-		<!-- /Added yes or no buttons for 3rd question, -->
-		<!-- /changed onclick functions for covid and flu -->
-		<!-- /changed 3rd question to be COVID v Flu symptoms -->
+			<!-- /Added yes or no buttons for 3rd question, -->
+			<!-- /changed onclick functions for covid and flu -->
+			<!-- /changed 3rd question to be COVID v Flu symptoms -->
 	</div>
 	
 </div>	
@@ -180,9 +180,9 @@ img, object{
 		<p>Have you experienced shortness of breath since your symptoms developed?</p>
 		<a href="#five"  onclick="COVIDadd();" class="w3-btn w3-black"> Yes</a>  
          	<a href="#five"  onclick="FLUadd();" class="w3-btn w3-black">No</a>
-		<!-- /Added yes or no buttons for 4th question, -->
-		<!-- /changed onclick functions for covid and flu -->
-		<!-- /changed 4th question to be COVID v Flu symptoms -->
+			<!-- /Added yes or no buttons for 4th question, -->
+			<!-- /changed onclick functions for covid and flu -->
+			<!-- /changed 4th question to be COVID v Flu symptoms -->
 	</div>
 	
 </div>
@@ -197,19 +197,20 @@ img, object{
 	</div>	
 	<div id="content" class="w3-container">
 		<p id="final"></p> 
-		<!--added id , -->
+			<!--added id , -->
 		<button onclick="math()">Results</button>
-		<!--this button is pressed to generate results-->	
+			<!--this button is pressed to generate results-->	
 	
 	</div>
 	
 	</div>
 	
-<!--added script and function for COVID v Flu calculations at top in script , -->	
+	<!--added script and function for COVID v Flu calculations at top in script..completed app , -->	
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY! Thank you for trying my App!</p>
+		<!-- added thank you to footer -->
 </footer>
 	
 
